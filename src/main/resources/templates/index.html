@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Sample Application</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <h1>Sample Application</h1>
+    <hr>
+    <div>
+        <p>Token Ops</p>
+        <p>
+            <a th:href="${authorizationUrl}">Get Token</a>
+        </p>
+        <p>Token = [[${tokenStatus}]]</p>
+    </div>
+    <hr>
+    <div>
+        <p>API Ops</p>
+        <form th:action="@{/callecho}" method="POST">
+            <input type="submit" value="Call Echo API" />
+        </form>
+        <p>Result =</p>
+        <p>[[${result}]]</p>
+    </div>
+    <hr>
+</body>
+</html>
