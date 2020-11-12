@@ -39,13 +39,9 @@ public class ClientAppController {
     @Autowired
     RestTemplate restTemplate;
 
-    private static final String AuthorizationEndpoint = "/protocol/openid-connect/auth";
-    private static final String TokenEndpoint = "/protocol/openid-connect/token";
-
     private String getAuthorizationUrl() {
         StringBuilder authorizationUrl = new StringBuilder();
-        authorizationUrl.append(clientConfig.getKeycloakUrl()).append("/auth/realms/").append(clientConfig.getRealm())
-            .append(AuthorizationEndpoint);
+        authorizationUrl.append(clientConfig.getAuthserverUrl()).append(clientConfig.getAuthorizationEndpoint());
 
         String redirectUrl;
         String scope;
@@ -87,7 +83,7 @@ public class ClientAppController {
 
     private TokenResponse requestToken(String authorizationCode) {
         StringBuilder tokenRequestUrl = new StringBuilder();
-        tokenRequestUrl.append(clientConfig.getKeycloakUrl()).append("/auth/realms/").append(clientConfig.getRealm()).append(TokenEndpoint);
+        tokenRequestUrl.append(clientConfig.getAuthserverUrl()).append(clientConfig.getTokenEndpoint());
 
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_FORM_URLENCODED);

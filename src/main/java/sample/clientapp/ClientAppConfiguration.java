@@ -6,28 +6,21 @@ import org.springframework.stereotype.Component;
 @Component
 @ConfigurationProperties(prefix = "clientapp.config")
 public class ClientAppConfiguration {
-    private String keycloakUrl;
+    private String authserverUrl;
     private String apiserverUrl;
     private String clientappUrl;
-    private String realm;
+    private String authorizationEndpoint;
+    private String tokenEndpoint;
     private String clientId;
     private String clientSecret;
     private String scope;
 
-    public String getKeycloakUrl() {
-        return keycloakUrl;
+    public String getAuthserverUrl() {
+        return authserverUrl;
     }
 
-    public void setKeycloakUrl(String value) {
-        keycloakUrl = value;
-    }
-
-    public String getRealm() {
-        return realm;
-    }
-
-    public void setRealm(String value) {
-        realm = value;
+    public void setAuthserverUrl(String value) {
+        authserverUrl = value;
     }
 
     public String getApiserverUrl() {
@@ -44,6 +37,22 @@ public class ClientAppConfiguration {
 
     public void setClientappUrl(String value) {
         clientappUrl = value;
+    }
+
+    public String getAuthorizationEndpoint() {
+        return authorizationEndpoint;
+    }
+
+    public void setAuthorizationEndpoint(String authorizationEndpoint) {
+        this.authorizationEndpoint = authorizationEndpoint;
+    }
+
+    public String getTokenEndpoint() {
+        return tokenEndpoint;
+    }
+
+    public void setTokenEndpoint(String tokenEndpoint) {
+        this.tokenEndpoint = tokenEndpoint;
     }
 
     public String getClientId() {

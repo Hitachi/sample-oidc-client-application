@@ -1,12 +1,11 @@
 # Sample OIDC Client Application
 
-Sample OIDC Client Application following [OAuth 2.0 Security Best Current Practice](https://tools.ietf.org/html/draft-ietf-oauth-security-topics-15), prepared for the 4th article of the series of ["API Security by Keycloak"](https://thinkit.co.jp/series/9721) in Japanese web media [ThinkIT](https://thinkit.co.jp/).
+Sample OIDC Client Application following [OAuth 2.0 Security Best Current Practice](https://tools.ietf.org/html/draft-ietf-oauth-security-topics-15).
 
 
 
 ## Specs
 
-- Act as a client application of [Keycloak](https://www.keycloak.org/)
 - TLS
 - OAuth 2.0 ([RFC6749](https://tools.ietf.org/html/rfc6749)) / [OIDC](https://openid.net/specs/openid-connect-core-1_0.html)
   - Authorization Code Grant
