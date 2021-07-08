@@ -1,4 +1,4 @@
-package sample.clientapp;
+package sample.config;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
@@ -14,6 +14,8 @@ public class ClientAppConfiguration {
     private String clientId;
     private String clientSecret;
     private String scope;
+    private String redirectUrl;
+    private String responseType;
 
     public String getAuthserverUrl() {
         return authserverUrl;
@@ -77,5 +79,21 @@ public class ClientAppConfiguration {
 
     public void setScope(String scope) {
         this.scope = scope;
+    }
+
+    public String getRedirectUrl() {
+        return redirectUrl;
+    }
+
+    public void setRedirectUrl(String redirectUrl) {
+        this.redirectUrl = redirectUrl;
+    }
+
+    public String getResponseType() {
+        return responseType;
+    }
+
+    public void setResponseType(String responseType) {
+        this.responseType = responseType;
     }
 }

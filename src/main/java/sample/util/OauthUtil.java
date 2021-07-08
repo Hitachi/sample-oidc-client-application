@@ -1,4 +1,4 @@
-package sample.clientapp;
+package sample.util;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
