@@ -1,4 +1,4 @@
-package sample.clientapp;
+package sample.config;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
